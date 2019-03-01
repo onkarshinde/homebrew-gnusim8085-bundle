@@ -10,6 +10,8 @@ class GdkPixbuf < Formula
     sha256 "1ad9524a855f609809fc404b68afc6cb417b856921fec44b0710301a74289562" => :sierra
   end
 
+  option "with-included-loaders=", "Build the specified loaders into gdk-pixbuf"
+
   depends_on "gobject-introspection" => :build
   depends_on "meson" => :build
   depends_on "ninja" => :build
