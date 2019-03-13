@@ -44,7 +44,7 @@ class GdkPixbuf < Formula
       -Dx11=false
       -Ddocs=false
       -Dgir=true
-      -Drelocatable=false
+      -Drelocatable=true
       -Dnative_windows_loaders=false
       -Dinstalled_tests=false
       -Dman=false
