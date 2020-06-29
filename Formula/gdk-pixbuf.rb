@@ -11,8 +11,6 @@ class GdkPixbuf < Formula
     sha256 "3e95bd4ea1b357022809c86a104e0e971a264ffc69888026f261d74507abea00" => :high_sierra
   end
 
-  option "with-included-loaders=", "Build the specified loaders into gdk-pixbuf"
-
   depends_on "gobject-introspection" => :build
   depends_on "meson" => :build
   depends_on "ninja" => :build
@@ -53,8 +51,7 @@ class GdkPixbuf < Formula
       -Dman=false
     ]
 
-    included_loaders = ARGV.value("with-included-loaders")
-    args << "-Dbuiltin_loaders=#{included_loaders}" if included_loaders
+    args << "-Dbuiltin_loaders=all"
 
     ENV["DESTDIR"] = "/"
     mkdir "build" do
